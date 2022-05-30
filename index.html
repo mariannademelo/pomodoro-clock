@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>pomodoro seu</title>
+	<link rel="stylesheet" href="prod/style.css">
+</head>
+<body>
+	<main class="pomodoro">
+		<header class="pomodoro__header">
+			<h1>pomodoro</h1>
+			<ul class="pomodoro__buttons">
+				<button class="active" pomodoro-btn>pomodoro</button>
+				<button short-break-btn>short break</button>
+			</ul>
+		</header>
+		<div class="pomodoro__wrapper">
+			<section class="pomodoro__clock">
+				<div class="loader">
+					<div class="loader__progress">
+					</div>
+					<div class="loader__fill">
+					</div>
+					<div class="loader__fill loader__fillbehind">
+					</div>
+				</div>
+				<div class="pomodoro__inner">
+					<div class="pomodoro__timer" data-type="pomodoro">
+						25:00
+					</div>
+					<button class="pomodoro__controller">
+						start
+					</button>
+				</div>
+			</section>
+		</div>
+	</main>
+
+	<script src="./resources/app.js" type="module"></script>
+</body>
+</html>
