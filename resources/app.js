@@ -50,7 +50,7 @@ class Pomodoro {
     
     if (mode === 'short-break') {
       $(this.selectors.resultsEl).text('05:00').attr('data-type', 'short-break');
-      this.totalTime = 60 * 5;
+      this.totalTime = 60 * 1;
       this.progress = 360 / this.totalTime--;
     } else {
       $(this.selectors.resultsEl).text('25:00').attr('data-type', 'pomodoro');
@@ -77,6 +77,7 @@ class Pomodoro {
       if ($(this.selectors.resultsEl).attr('data-type') === 'pomodoro') {
         $(this.selectors.resultsEl).text('25:00');
         this.toggleLength('pomodoro');
+        this.startTimer();
       } else {
         $(this.selectors.resultsEl).text('05:00');
         this.toggleLength('short-break');
@@ -113,3 +114,28 @@ class Pomodoro {
 
 const pomodoro = new Pomodoro();
 pomodoro.eventsHandlers();
+
+class Alert extends Pomodoro {
+  constructor() {
+    super();
+    this.selectors = {
+      close: '.alert__close',
+      alert: '.alert',
+    };
+
+    this.classNames = {
+      close: 'close',
+    };
+  }
+
+  eventsHandlers() {
+    $(this.selectors.close).on('click', this.closeAlert.bind(this));
+  }
+
+  closeAlert() {
+    $(this.selectors.alert).addClass(this.classNames.close);
+  }
+}
+
+const alert = new Alert();
+alert.eventsHandlers();
