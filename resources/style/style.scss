@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+$pink: #EF7271;
+$dark-blue: #151932;
+$blue: #1E2140;
+$border-radius: 50px;
+$gradient: linear-gradient(to top left, #262956, #141835, #141835);
+$black: #000000;
+
+%button-pink {
+  background: $pink;
+  border-radius: $border-radius;
+  color: $dark-blue;
+  opacity: 1;
+  padding: 13px 24px;
+}
+
+%button-outline {
+  padding: 13px 24px;
+  border: 1px solid $pink;
+  border-radius: $border-radius;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  align-items: center;
+  background: $blue;
+  color: #fff;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+}
+
+main {
+  height: 100%;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  color: white;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+@import 'alert';
+@import 'pomodoro';
+@import 'loader';

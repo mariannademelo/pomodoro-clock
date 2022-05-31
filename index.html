@@ -26,18 +26,16 @@
 					<div class="loader__fill loader__fillbehind">
 					</div>
 				</div>
-				<div class="pomodoro__inner">
-					<div class="pomodoro__timer" data-type="pomodoro">
-						25:00
-					</div>
-					<button class="pomodoro__controller">
-						start
-					</button>
+				<div class="pomodoro__timer" data-type="pomodoro">
+					25:00
 				</div>
+				<button class="pomodoro__controller">
+					start
+				</button>
 			</section>
 		</div>
 	</main>
-	<div class="pomodoro__alert alert">
+	<div class="pomodoro__alert alert close" data-type="after-pomodoro">
 		<div class="alert__container">
 			<button class="alert__close">&#10006;</button>
 			<div class="alert__body">
@@ -45,13 +43,13 @@
 					Wanna start your short break now?
 				</p>
 				<div class="alert__buttons">
-					<button>yes</button>
-					<button>no, repeat pomodoro</button>
+					<button class="alert__accept">yes</button>
+					<button class="alert__refuse">no, repeat pomodoro</button>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<script src="./resources/app.js" type="module"></script>
+	<script src="./resources/script/app.js" type="module"></script>
 </body>
 </html>

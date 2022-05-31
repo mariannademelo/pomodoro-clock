@@ -1,0 +1,82 @@
+.pomodoro {
+  h1 {
+    margin: 50px 0 0;
+  }
+
+  &__buttons {
+    align-items: center;
+    background: $dark-blue;
+    border-radius: $border-radius;
+    display: inline-flex;
+    justify-content: center;
+    margin: 52px auto;
+    padding: 6px 7px;
+    width: auto;
+
+    button {
+      padding: 13px 24px;
+      opacity: 0.7;
+      white-space: nowrap;
+
+      &.active {
+        @extend %button-pink;
+      }
+    }
+  }
+
+  &__clock {
+    background: cadetblue;
+    border-radius: 50%;
+    margin: 0 auto;
+    width: 353px;
+    height: 353px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+    &::before {
+      border-radius: inherit;
+      box-shadow: -45px 20px 72px #262956, 59px -22px 56px #141835;
+      content: '';
+      height: 100%;
+      position: absolute;
+      transform: rotate(74deg);
+      width: 100%;
+    }
+  }
+
+  &__stopper {
+    cursor: pointer;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__controller {
+    direction: rtl;
+    font-size: 20px;
+    font-weight: 300;
+    height: 100%;
+    left: 50%;
+    letter-spacing: 17px;
+    padding-top: 161px;
+    position: absolute;
+    text-indent: -1em;
+    top: 0;
+    transform: translate(-50%);
+    width: 100%;
+    z-index: 3;
+  }
+
+  &__timer {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 80px;
+    opacity: 0.8;
+    position: relative;
+    z-index: 3;
+  }
+}
