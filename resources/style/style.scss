@@ -5,6 +5,7 @@ $blue: #1E2140;
 $border-radius: 50px;
 $gradient: linear-gradient(to top left, #262956, #141835, #141835);
 $black: #000000;
+$white: #ffffff;
 
 %button-pink {
   background: $pink;
@@ -20,6 +21,13 @@ $black: #000000;
   border-radius: $border-radius;
 }
 
+%fixed-center {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,9 +40,10 @@ body {
   background: $blue;
   color: #fff;
   display: flex;
+  flex-direction: column;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  height: 100vh;
+  // height: 100vh;
   justify-content: center;
   position: relative;
 }
@@ -56,3 +65,4 @@ button {
 @import 'alert';
 @import 'pomodoro';
 @import 'loader';
+@import 'to-do';
