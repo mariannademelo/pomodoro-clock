@@ -1,0 +1,78 @@
+.to-do-ctn {
+  padding: 127px 0;
+  position: relative;
+
+  &__wrapper {
+    align-items: flex-start;
+    display: flex;
+    gap: 32px;
+    width: 1239px;
+  }
+  
+  .to-do {
+    border: 1px solid rgba(255,255,255,0.13);
+    flex: 1 1 0px;
+    flex-basis: 0;
+    margin-top: 74px;
+
+    &__item {
+      border: 1px solid rgba($white, 0.13);
+      cursor: move;
+      font-weight: 300;
+      margin: 29px;
+      padding: 19px 19px 48px;
+      position: relative;
+
+    }
+
+    &__date {
+      bottom: 0;
+      color: rgba($white, 0.5);
+      font-size: 12px;
+      font-weight: 300;
+      margin: 11px 17px;
+      position: absolute;
+      right: 0;
+      white-space: nowrap;
+    }
+
+    &__header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin: 22px;
+    }
+  }
+
+  .new-task {
+    display: none;
+    padding: 0;
+
+    &.show {
+      display: block;
+    }
+
+    form {
+      position: relative;
+    }
+
+    textarea {
+      background: transparent;
+      border: inherit;
+      color: inherit;
+      font-size: 16px;
+      font-weight: 300;
+      outline: none;
+      padding: 19px 19px 48px;
+      width: 100%;
+    }
+
+    button {
+      bottom: 0;
+      font-weight: bold;
+      left: 0;
+      margin: 8px;
+      position: absolute;
+    }
+  }
+}
